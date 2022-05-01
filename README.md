@@ -29,6 +29,7 @@ For liscence check LISCENCE.md.
 
 ### Setup for development
 
-- Install dependencies: **npm install**
-- Configure baseURL in .env: **VUE_APP_BASE_URL=http://localhost:5000/api/cook-this-loser/**
-- Start Vue-server: **vue-cli-service serve**
+- install dependencies: **npm install**
+- configure baseURL in .env: **VUE_APP_BASE_URL=http://localhost:5000/api/cook-this-loser/**
+- provide local backend: **TODO**
+- start Vue-server: **vue-cli-service serve**
