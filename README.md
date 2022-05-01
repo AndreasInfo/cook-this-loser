@@ -9,7 +9,7 @@ Some more ideas to improve the app are:
 - make the project multilingual
 - beautify the main page, e.g. with images
 - store the images on the server, not in the db (I know, that was a horrible idea!)
-- mark a multiple recepies to extract and/or share a combined shopping list
+- mark multiple recepies to extract and/or share a combined shopping list
 - more ideas are welcome!
 
 Some known bugs are:
