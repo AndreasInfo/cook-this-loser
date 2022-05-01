@@ -1,0 +1,142 @@
+// https://hackernoon.com/how-to-use-bulma-and-vuejs-together-z0103ucp
+$input-background-color: rgba(255, 255, 255, 0.7);
+$table-background-color: rgba(255, 255, 255, 0.7);
+$table-cell-border-width: 0px;
+@import "~bulma";
+
+// multiselect component
+@import "./../../node_modules/@vueform/multiselect/themes/default.css";
+.multiselect {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+// global tables
+// try out css for break lines: white-space, word-break, overflow-wrap, word-wrap, hyphens
+.no-word-break {
+  white-space: nowrap; //forces table cell to not break words
+}
+
+.word-break {
+  word-break: break-word; //tries to break between words, if not possible breaks words
+}
+
+@media only screen and (max-width: 768px) {
+  table {
+    table-layout: fixed;
+    max-width: 90vw;
+    // width: 90vw;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  table {
+    table-layout: fixed;
+    max-width: 768px;
+    // width: 768px;
+  }
+}
+
+// global transition
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// global background
+// source: https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/
+.ctl-slideshow,
+.ctl-slideshow:after {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1; // was 0 before
+}
+.ctl-slideshow:after {
+  content: "";
+  // background: transparent url("~@/assets/pattern.png") repeat top left;
+}
+
+.ctl-slideshow li span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 60s linear infinite 0s;
+}
+
+.ctl-slideshow li:nth-child(1) span {
+  background-image: url("~@/assets/bg_1.jpg");
+}
+.ctl-slideshow li:nth-child(2) span {
+  background-image: url("~@/assets/bg_2.jpg");
+  animation-delay: 6s;
+}
+.ctl-slideshow li:nth-child(3) span {
+  background-image: url("~@/assets/bg_3.jpg");
+  animation-delay: 12s;
+}
+.ctl-slideshow li:nth-child(4) span {
+  background-image: url("~@/assets/bg_4.jpg");
+  animation-delay: 18s;
+}
+.ctl-slideshow li:nth-child(5) span {
+  background-image: url("~@/assets/bg_5.jpg");
+  animation-delay: 24s;
+}
+.ctl-slideshow li:nth-child(6) span {
+  background-image: url("~@/assets/bg_6.jpg");
+  animation-delay: 30s;
+}
+.ctl-slideshow li:nth-child(7) span {
+  background-image: url("~@/assets/bg_7.jpg");
+  animation-delay: 36s;
+}
+.ctl-slideshow li:nth-child(8) span {
+  background-image: url("~@/assets/bg_8.jpg");
+  animation-delay: 42s;
+}
+.ctl-slideshow li:nth-child(9) span {
+  background-image: url("~@/assets/bg_9.jpg");
+  animation-delay: 48s;
+}
+.ctl-slideshow li:nth-child(10) span {
+  background-image: url("~@/assets/bg_10.jpg");
+  animation-delay: 54s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  5% {
+    opacity: 0.3;
+    transform: scale(1.05);
+    animation-timing-function: ease-out;
+  }
+  10% {
+    opacity: 0.3;
+    transform: scale(1.1) rotate(3deg);
+  }
+  15% {
+    opacity: 0;
+    transform: scale(1.1) rotate(3deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
