@@ -1,6 +1,6 @@
 # Cook this, loser!
 
-The goal was to create a place to store my mom's and grandma's recipies. While creating this app, I made it possible for them to insert the recipies themselves by implementing user accounts with authentification. Furthermore I made it possible to export single recipies as PDFs via a print button.
+The goal was to create a place to store my mom's and grandma's recipies. While creating this app, I made it possible for them to insert the recipies themselves by implementing user accounts with authentification. Furthermore, I made it possible to export single recipies as PDFs via a print button.
 
 The current version is published on https://apps.handy-solutions.de/cook-this-loser/dist/index.html#/. It's pretty basic, but it does what it's designed for :).
 
