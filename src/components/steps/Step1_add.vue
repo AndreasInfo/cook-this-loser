@@ -71,6 +71,7 @@
                 Frühstück: 'Frühstück',
                 Kuchen: 'Kuchen',
                 Süßes: 'Süßes',
+                Weihnachten: 'Weihnachten',
                 Sonstiges: 'Sonstiges',
               }"
             />
