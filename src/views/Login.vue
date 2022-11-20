@@ -42,9 +42,7 @@
         >
           Zurück
         </button>
-        <button type="submit" class="button is-info m-3">
-          Login
-        </button>
+        <button type="submit" class="button is-info m-3">Login</button>
       </form>
     </div>
   </div>
@@ -62,7 +60,7 @@ export default {
   },
 
   methods: {
-    submitForm: function() {
+    submitForm: function () {
       var username = this.username;
       var password = this.password;
 

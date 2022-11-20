@@ -183,7 +183,7 @@ export default {
   },
 
   computed: {
-    recipies_info_filtered: function() {
+    recipies_info_filtered: function () {
       var recipies_info_filtered = this.recipies_info;
 
       // filter by creator
@@ -224,7 +224,7 @@ export default {
     },
   },
 
-  mounted: function() {
+  mounted: function () {
     this.axios({
       method: "get",
       url: "get_recipies_info",

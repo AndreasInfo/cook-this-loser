@@ -20,9 +20,7 @@
             </div>
           </div>
 
-          <button type="submit" class="button is-info m-3">
-            Hinzufügen
-          </button>
+          <button type="submit" class="button is-info m-3">Hinzufügen</button>
         </div>
       </div>
     </form>
@@ -102,7 +100,7 @@ export default {
   },
 
   methods: {
-    addStep: function() {
+    addStep: function () {
       const allowed_word_length = 50;
 
       // allowed word length for steps's description exeeded
@@ -138,7 +136,7 @@ export default {
       }
     },
 
-    removeStep: function(id) {
+    removeStep: function (id) {
       this.steps = this.steps.filter((step) => {
         return step.id != id;
       });
@@ -148,7 +146,7 @@ export default {
       this.$store.commit("updateRecipeSteps", this.steps);
     },
 
-    editStep: function(id) {
+    editStep: function (id) {
       var edit_step = this.steps.filter((step) => {
         return step.id == id;
       });
@@ -159,13 +157,13 @@ export default {
       this.removeStep(edit_step[0].id);
     },
 
-    refreshIds: function() {
+    refreshIds: function () {
       for (let index = 0; index < this.steps.length; index++) {
         this.steps[index].id = index + 1;
       }
     },
 
-    nextButton: function() {
+    nextButton: function () {
       if (this.steps.length == 0) {
         let alert = {
           _title: "Sorry, hier ist ein Fehler!",
@@ -185,7 +183,7 @@ export default {
     },
   },
 
-  mounted: function() {
+  mounted: function () {
     this.refreshIds();
   },
 };

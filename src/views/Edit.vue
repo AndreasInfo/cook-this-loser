@@ -49,12 +49,12 @@ export default {
   },
 
   methods: {
-    updateView: function(page) {
+    updateView: function (page) {
       this.view = page;
     },
   },
 
-  created: function() {
+  created: function () {
     this.loading = true;
 
     this.axios({
@@ -129,7 +129,7 @@ export default {
       });
   },
 
-  mounted: function() {
+  mounted: function () {
     //load and set recipe
     var data = { name: this.name, creator: this.creator };
     this.axios({
@@ -208,7 +208,7 @@ export default {
       });
   },
 
-  unmounted: function() {
+  unmounted: function () {
     this.$store.commit("resetRecipeData");
   },
 };

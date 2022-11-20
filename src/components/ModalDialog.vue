@@ -16,12 +16,8 @@
       </section>
 
       <footer class="modal-card-foot">
-        <button class="button is-danger m-3" @click="noFunction">
-          Nein
-        </button>
-        <button class="button is-danger m-3" @click="yesFunction">
-          Ja
-        </button>
+        <button class="button is-danger m-3" @click="noFunction">Nein</button>
+        <button class="button is-danger m-3" @click="yesFunction">Ja</button>
       </footer>
     </div>
   </div>

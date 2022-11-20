@@ -53,7 +53,7 @@ export default createStore({
     },
   },
   mutations: {
-    showDialog: function(state, dialog) {
+    showDialog: function (state, dialog) {
       state.dialog._title = dialog._title;
       state.dialog._body = dialog._body;
       state.dialog.isActive = dialog.isActive;
@@ -62,7 +62,7 @@ export default createStore({
       state.dialog.closeFunction = dialog.closeFunction;
     },
 
-    showAlert: function(state, alert) {
+    showAlert: function (state, alert) {
       state.alert._title = alert._title;
       state.alert._body = alert._body;
       state.alert.isActive = alert.isActive;
@@ -70,55 +70,55 @@ export default createStore({
       state.alert.closeFunction = alert.closeFunction;
     },
 
-    closeAlert: function(state) {
+    closeAlert: function (state) {
       state.alert.isActive = false;
     },
 
-    closeDialog: function(state) {
+    closeDialog: function (state) {
       state.dialog.isActive = false;
     },
 
-    updateUserUsername: function(state, username) {
+    updateUserUsername: function (state, username) {
       state.user.username = username;
     },
 
-    resetUserUsername: function(state) {
+    resetUserUsername: function (state) {
       state.user.username = "";
     },
 
-    updateRecipeName: function(state, name) {
+    updateRecipeName: function (state, name) {
       state.data.recipe.name = name;
     },
 
-    updateRecipePersons: function(state, persons) {
+    updateRecipePersons: function (state, persons) {
       state.data.recipe.persons = persons;
     },
 
-    updateRecipeTime: function(state, time) {
+    updateRecipeTime: function (state, time) {
       state.data.recipe.time = time;
     },
 
-    updateRecipeCategory: function(state, category) {
+    updateRecipeCategory: function (state, category) {
       state.data.recipe.category = category;
     },
 
-    updateRecipeIngredients: function(state, ingredients) {
+    updateRecipeIngredients: function (state, ingredients) {
       state.data.recipe.ingredients = ingredients;
     },
 
-    updateRecipeSteps: function(state, steps) {
+    updateRecipeSteps: function (state, steps) {
       state.data.recipe.steps = steps;
     },
 
-    updateFilterCreator: function(state, creator) {
+    updateFilterCreator: function (state, creator) {
       state.filter.creator = creator;
     },
 
-    updateFilterCategory: function(state, category) {
+    updateFilterCategory: function (state, category) {
       state.filter.category = category;
     },
 
-    resetRecipeData: function(state) {
+    resetRecipeData: function (state) {
       state.data.recipe.name = "";
       state.data.recipe.persons = "";
       state.data.recipe.time = "";

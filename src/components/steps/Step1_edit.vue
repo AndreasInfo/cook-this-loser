@@ -95,9 +95,7 @@
       >
         Zurück
       </button>
-      <button type="submit" class="button is-info m-3">
-        Weiter
-      </button>
+      <button type="submit" class="button is-info m-3">Weiter</button>
     </form>
   </div>
 </template>
@@ -120,7 +118,7 @@ export default {
   },
 
   methods: {
-    submitForm: function() {
+    submitForm: function () {
       var allowed_word_length = 50;
       var words = this.name.split(" ");
       var words_with_20_char_or_more = words.filter((word) => {
@@ -150,7 +148,7 @@ export default {
       }
     },
 
-    deleteButton: function() {
+    deleteButton: function () {
       let dialog = {
         _title: "Bist du sicher?",
         _body: "Das Rezept wird unwiderruflich gelöscht.",

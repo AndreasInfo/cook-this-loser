@@ -96,13 +96,13 @@ export default {
   },
 
   methods: {
-    download_or_print_pdf: function() {
+    download_or_print_pdf: function () {
       var url = `get_recipe_as_pdf/c/${this.creator}/n/${this.name}`;
       window.open(process.env.VUE_APP_BASE_URL + url);
     },
   },
 
-  mounted: function() {
+  mounted: function () {
     // get and show recipe
     var data = { name: this.name, creator: this.creator };
 

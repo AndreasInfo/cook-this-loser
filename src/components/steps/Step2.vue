@@ -50,9 +50,7 @@
         </div>
       </div>
 
-      <button type="submit" class="button is-info m-3">
-        Hinzufügen
-      </button>
+      <button type="submit" class="button is-info m-3">Hinzufügen</button>
     </form>
 
     <div class="columns is-centered is-mobile m-3">
@@ -140,7 +138,7 @@ export default {
   },
 
   methods: {
-    addIngredient: function() {
+    addIngredient: function () {
       const allowed_word_length = 50;
 
       // allowed word length for ingredients's name exeeded
@@ -178,14 +176,14 @@ export default {
       }
     },
 
-    removeIngredient: function(name) {
+    removeIngredient: function (name) {
       this.ingredients = this.ingredients.filter((ingredient) => {
         return ingredient.name != name;
       });
       this.$store.commit("updateRecipeIngredients", this.ingredients);
     },
 
-    editIngredient: function(name) {
+    editIngredient: function (name) {
       var edit_ingredient = this.ingredients.filter((ingredient) => {
         return ingredient.name == name;
       });
@@ -197,7 +195,7 @@ export default {
       this.removeIngredient(edit_ingredient[0].name);
     },
 
-    nextButton: function() {
+    nextButton: function () {
       if (this.ingredients.length == 0) {
         let alert = {
           _title: "Sorry, hier ist ein Fehler!",

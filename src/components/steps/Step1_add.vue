@@ -86,9 +86,7 @@
       >
         Zurück
       </button>
-      <button type="submit" class="button is-info m-3">
-        Weiter
-      </button>
+      <button type="submit" class="button is-info m-3">Weiter</button>
     </form>
   </div>
 </template>
@@ -111,7 +109,7 @@ export default {
   },
 
   methods: {
-    submitForm: function() {
+    submitForm: function () {
       var allowed_word_length = 50;
       var words = this.name.split(" ");
       var words_with_20_char_or_more = words.filter((word) => {

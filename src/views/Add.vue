@@ -44,12 +44,12 @@ export default {
   },
 
   methods: {
-    updateView: function(page) {
+    updateView: function (page) {
       this.view = page;
     },
   },
 
-  created: function() {
+  created: function () {
     this.loading = true;
 
     this.axios({
@@ -103,7 +103,7 @@ export default {
       });
   },
 
-  mounted: function() {
+  mounted: function () {
     this.view = Step1_add;
   },
 
@@ -157,7 +157,7 @@ export default {
   // });
   // },
 
-  unmounted: function() {
+  unmounted: function () {
     this.$store.commit("resetRecipeData");
   },
 };

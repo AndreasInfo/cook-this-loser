@@ -16,9 +16,7 @@
       </section>
 
       <footer class="modal-card-foot">
-        <button class="button is-danger m-3" @click="okFunction">
-          Ok
-        </button>
+        <button class="button is-danger m-3" @click="okFunction">Ok</button>
       </footer>
     </div>
   </div>

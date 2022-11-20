@@ -70,13 +70,13 @@ export default {
   components: { ModalDialog, ModalAlert },
 
   computed: {
-    username: function() {
+    username: function () {
       return this.$store.state.user.username;
     },
   },
 
   methods: {
-    logout: function() {
+    logout: function () {
       this.axios({
         method: "get",
         url: "logout",
@@ -123,7 +123,7 @@ export default {
     },
   },
 
-  mounted: function() {
+  mounted: function () {
     this.axios({
       method: "get",
       url: "get_logged_in_user",

@@ -20,9 +20,7 @@
                 <span class="file-icon">
                   <i class="fas fa-upload"></i>
                 </span>
-                <span class="file-label">
-                  Wähle ein Bild
-                </span>
+                <span class="file-label">Wähle ein Bild</span>
               </span>
               <span class="file-name">
                 {{ filename }}
@@ -39,9 +37,7 @@
       >
         Zurück
       </button>
-      <button type="submit" class="button is-info m-3">
-        Fertig
-      </button>
+      <button type="submit" class="button is-info m-3">Fertig</button>
     </form>
   </div>
 </template>
@@ -64,7 +60,7 @@ export default {
   },
 
   methods: {
-    refreshFilename: function() {
+    refreshFilename: function () {
       try {
         this.filename = this.$refs.myFiles.files[0].name;
       } catch (error) {
@@ -74,7 +70,7 @@ export default {
       }
     },
 
-    submitForm: async function() {
+    submitForm: async function () {
       const reader = new FileReader();
       const allowed_file_size = 50000;
       var image = this.$refs.myFiles.files[0]; // is undefined, if no file is set
