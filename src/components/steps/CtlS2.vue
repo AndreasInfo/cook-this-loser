@@ -119,7 +119,7 @@
 import draggable from "@/../node_modules/vuedraggable";
 
 export default {
-  name: "Step2",
+  name: "CtlS2",
 
   // display: "Simple", // is part of vuedraggable, not sure what it does
 

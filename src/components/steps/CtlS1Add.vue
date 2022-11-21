@@ -95,7 +95,7 @@
 import Multiselect from "@vueform/multiselect";
 
 export default {
-  name: "Step1_add",
+  name: "CtlS1Add",
 
   components: { Multiselect },
 

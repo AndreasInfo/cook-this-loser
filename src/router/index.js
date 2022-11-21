@@ -1,36 +1,36 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import Home from "../views/Home.vue";
-import Add from "../views/Add.vue";
-import Edit from "../views/Edit.vue";
-import Recipe from "../views/Recipe.vue";
-import Login from "../views/Login.vue";
+import CtlHome from "../views/CtlHome.vue";
+import CtlAdd from "../views/CtlAdd.vue";
+import CtlEdit from "../views/CtlEdit.vue";
+import CtlRecipe from "../views/CtlRecipe.vue";
+import CtlLogin from "../views/CtlLogin.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "CtlHome",
+    component: CtlHome,
   },
   {
     path: "/login",
-    name: "Login",
-    component: Login,
+    name: "CtlLogin",
+    component: CtlLogin,
   },
   {
     path: "/add",
-    name: "Add",
-    component: Add,
+    name: "CtlAdd",
+    component: CtlAdd,
   },
   {
     path: "/edit/c/:creator/n/:name",
-    name: "Edit",
-    component: Edit,
+    name: "CtlEdit",
+    component: CtlEdit,
   },
   {
     path: "/recipe/c/:creator/n/:name",
-    name: "Recipe",
-    component: Recipe,
+    name: "CtlRecipe",
+    component: CtlRecipe,
   },
 ];
 

@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  name: "Step4_edit",
+  name: "CtlS4Add",
 
   data() {
     return {
@@ -100,8 +100,6 @@ export default {
           ingredients: this.ingredients,
           steps: this.steps,
           image: "",
-
-          prev_name: this.$route.params.name,
         };
 
         // read file if exists
@@ -122,7 +120,7 @@ export default {
 
         this.axios({
           method: "post",
-          url: "update_recipe",
+          url: "upload_recipe",
           data: data,
         })
           .then((response) => {

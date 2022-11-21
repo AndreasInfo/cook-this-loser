@@ -6,14 +6,14 @@
       <transition name="fade" mode="out-in">
         <component
           :is="view"
-          @previous-page-s1="$router.replace({ name: 'Home' })"
-          @next-page-s1="updateView('Step2')"
-          @previous-page-s2="updateView('Step1_edit')"
-          @next-page-s2="updateView('Step3')"
-          @previous-page-s3="updateView('Step2')"
-          @next-page-s3="updateView('Step4_edit')"
-          @previous-page-s4="updateView('Step3')"
-          @next-page-s4="$router.replace({ name: 'Home' })"
+          @previous-page-s1="$router.replace({ name: 'CtlHome' })"
+          @next-page-s1="updateView('CtlS2')"
+          @previous-page-s2="updateView('CtlS1Edit')"
+          @next-page-s2="updateView('CtlS3')"
+          @previous-page-s3="updateView('CtlS2')"
+          @next-page-s3="updateView('CtlS4Edit')"
+          @previous-page-s4="updateView('CtlS3')"
+          @next-page-s4="$router.replace({ name: 'CtlHome' })"
         ></component>
       </transition>
     </div>
@@ -21,19 +21,19 @@
 </template>
 
 <script>
-import Step1_edit from "../components/steps/Step1_edit.vue";
-import Step2 from "../components/steps/Step2.vue";
-import Step3 from "../components/steps/Step3.vue";
-import Step4_edit from "../components/steps/Step4_edit.vue";
+import CtlS1Edit from "../components/steps/CtlS1Edit.vue";
+import CtlS2 from "../components/steps/CtlS2.vue";
+import CtlS3 from "../components/steps/CtlS3.vue";
+import CtlS4Edit from "../components/steps/CtlS4Edit.vue";
 
 export default {
-  name: "Add",
+  name: "CtlEdit",
 
   components: {
-    Step1_edit,
-    Step2,
-    Step3,
-    Step4_edit,
+    CtlS1Edit,
+    CtlS2,
+    CtlS3,
+    CtlS4Edit,
   },
 
   data() {
@@ -77,7 +77,7 @@ export default {
           };
           this.$store.commit("showAlert", alert);
 
-          this.$router.replace({ name: "Home" });
+          this.$router.replace({ name: "CtlHome" });
         }
       })
       .catch((error) => {
@@ -96,12 +96,12 @@ export default {
             };
             this.$store.commit("showAlert", alert);
 
-            this.$router.replace({ name: "Home" });
+            this.$router.replace({ name: "CtlHome" });
             break;
           }
 
           case 401: {
-            this.$router.replace({ name: "Login" });
+            this.$router.replace({ name: "CtlLogin" });
             break;
           }
 
@@ -119,7 +119,7 @@ export default {
             };
             this.$store.commit("showAlert", alert);
 
-            this.$router.replace({ name: "Home" });
+            this.$router.replace({ name: "CtlHome" });
             break;
           }
         }
@@ -149,7 +149,7 @@ export default {
         this.$store.commit("updateRecipeCategory", response.data.data.category);
 
         //set view
-        this.view = Step1_edit;
+        this.view = CtlS1Edit;
       })
       .catch((error) => {
         switch (error.response.status) {
@@ -167,7 +167,7 @@ export default {
             };
             this.$store.commit("showAlert", alert);
 
-            this.$router.replace({ name: "Home" });
+            this.$router.replace({ name: "CtlHome" });
             break;
           }
           case 404: {
@@ -184,7 +184,7 @@ export default {
             };
             this.$store.commit("showAlert", alert);
 
-            this.$router.replace({ name: "Home" });
+            this.$router.replace({ name: "CtlHome" });
             break;
           }
           default: {
@@ -201,7 +201,7 @@ export default {
             };
             this.$store.commit("showAlert", alert);
 
-            this.$router.replace({ name: "Home" });
+            this.$router.replace({ name: "CtlHome" });
             break;
           }
         }

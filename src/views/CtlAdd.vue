@@ -6,14 +6,14 @@
       <transition name="fade" mode="out-in">
         <component
           :is="view"
-          @previous-page-s1="$router.replace({ name: 'Home' })"
-          @next-page-s1="updateView('Step2')"
-          @previous-page-s2="updateView('Step1_add')"
-          @next-page-s2="updateView('Step3')"
-          @previous-page-s3="updateView('Step2')"
-          @next-page-s3="updateView('Step4_add')"
-          @previous-page-s4="updateView('Step3')"
-          @next-page-s4="$router.replace({ name: 'Home' })"
+          @previous-page-s1="$router.replace({ name: 'CtlHome' })"
+          @next-page-s1="updateView('CtlS2')"
+          @previous-page-s2="updateView('CtlS1Add')"
+          @next-page-s2="updateView('CtlS3')"
+          @previous-page-s3="updateView('CtlS2')"
+          @next-page-s3="updateView('CtlS4Add')"
+          @previous-page-s4="updateView('CtlS3')"
+          @next-page-s4="$router.replace({ name: 'CtlHome' })"
         ></component>
       </transition>
     </div>
@@ -21,19 +21,19 @@
 </template>
 
 <script>
-import Step1_add from "../components/steps/Step1_add.vue";
-import Step2 from "../components/steps/Step2.vue";
-import Step3 from "../components/steps/Step3.vue";
-import Step4_add from "../components/steps/Step4_add.vue";
+import CtlS1Add from "../components/steps/CtlS1Add.vue";
+import CtlS2 from "../components/steps/CtlS2.vue";
+import CtlS3 from "../components/steps/CtlS3.vue";
+import CtlS4Add from "../components/steps/CtlS4Add.vue";
 
 export default {
-  name: "Add",
+  name: "CtlAdd",
 
   components: {
-    Step1_add,
-    Step2,
-    Step3,
-    Step4_add,
+    CtlS1Add,
+    CtlS2,
+    CtlS3,
+    CtlS4Add,
   },
 
   data() {
@@ -104,7 +104,7 @@ export default {
   },
 
   mounted: function () {
-    this.view = Step1_add;
+    this.view = CtlS1Add;
   },
 
   // beforeRouteEnter() {

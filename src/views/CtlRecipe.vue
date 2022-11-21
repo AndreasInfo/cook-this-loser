@@ -5,7 +5,7 @@
 
       <div class="has-text-centered">
         <button
-          @click="$router.push({ name: 'Home' })"
+          @click="$router.push({ name: 'CtlHome' })"
           class="button is-info m-5"
         >
           Zurück
@@ -80,7 +80,7 @@
 
 <script>
 export default {
-  name: "Recipe",
+  name: "CtlRecipe",
 
   data() {
     return {

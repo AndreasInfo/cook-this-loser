@@ -104,7 +104,7 @@
 import Multiselect from "@vueform/multiselect";
 
 export default {
-  name: "Step1_edit",
+  name: "CtlS1Edit",
 
   components: { Multiselect },
 
@@ -164,7 +164,7 @@ export default {
             data: data,
           })
             .then(() => {
-              this.$router.replace({ name: "Home" });
+              this.$router.replace({ name: "CtlHome" });
             })
             .catch((error) => {
               switch (error.response.status) {

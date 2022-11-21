@@ -85,7 +85,7 @@
 import draggable from "@/../node_modules/vuedraggable";
 
 export default {
-  name: "Step3",
+  name: "CtlS3",
 
   components: {
     draggable,

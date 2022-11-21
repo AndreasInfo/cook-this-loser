@@ -5,7 +5,7 @@
 
       <div class="has-text-centered">
         <button
-          @click="$router.push({ name: 'Add' })"
+          @click="$router.push({ name: 'CtlAdd' })"
           class="button is-info m-5"
         >
           Rezept hinzufügen
@@ -79,7 +79,7 @@
                 <a
                   @click="
                     $router.push({
-                      name: 'Recipe',
+                      name: 'CtlRecipe',
                       params: {
                         creator: `${recipe_info.creator}`,
                         name: `${recipe_info.name}`,
@@ -96,7 +96,7 @@
                 <i
                   @click="
                     $router.push({
-                      name: 'Edit',
+                      name: 'CtlEdit',
                       params: {
                         creator: `${recipe_info.creator}`,
                         name: `${recipe_info.name}`,
@@ -129,7 +129,7 @@
                   <a
                     @click="
                       $router.push({
-                        name: 'Recipe',
+                        name: 'CtlRecipe',
                         params: {
                           creator: `${recipe_info.creator}`,
                           name: `${recipe_info.name}`,
@@ -146,7 +146,7 @@
                   <i
                     @click="
                       $router.push({
-                        name: 'Edit',
+                        name: 'CtlEdit',
                         params: {
                           creator: `${recipe_info.creator}`,
                           name: `${recipe_info.name}`,

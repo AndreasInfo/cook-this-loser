@@ -24,7 +24,9 @@
           />
         </a>
         <div class="is-pulled-right has-text-right">
-          <a v-if="!username" @click="$router.push({ name: 'Login' })">Login</a>
+          <a v-if="!username" @click="$router.push({ name: 'CtlLogin' })">
+            Login
+          </a>
           <div v-else>
             <div v-if="username">{{ username }}</div>
             <a v-if="username" @click="logout">Logout</a>
@@ -83,7 +85,7 @@ export default {
       })
         .then(() => {
           this.$store.commit("resetUserUsername");
-          this.$router.replace({ name: "Home" });
+          this.$router.replace({ name: "CtlHome" });
         })
         .catch((error) => {
           switch (error.response.status) {

@@ -38,7 +38,7 @@
         <button
           type="button"
           class="button is-info m-3"
-          @click="$router.push({ name: 'Home' })"
+          @click="$router.push({ name: 'CtlHome' })"
         >
           Zurück
         </button>
@@ -50,7 +50,7 @@
 
 <script>
 export default {
-  name: "Authentification",
+  name: "CtlLogin",
 
   data() {
     return {
@@ -71,7 +71,7 @@ export default {
       })
         .then(() => {
           this.$store.commit("updateUserUsername", username);
-          this.$router.replace({ name: "Home" });
+          this.$router.replace({ name: "CtlHome" });
         })
         .catch((error) => {
           switch (error.response.status) {
