@@ -77,6 +77,7 @@
                 Vegan: 'Vegan',
                 Salate: 'Salate',
                 Suppen: 'Suppen',
+                Sushi: 'Sushi',
                 Frühstück: 'Frühstück',
                 Kuchen: 'Kuchen',
                 Süßes: 'Süßes',
